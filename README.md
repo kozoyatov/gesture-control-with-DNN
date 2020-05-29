@@ -1,10 +1,10 @@
-# Gesture-Control With DNN Model
+# Gesture Control With DNN Model
 <h2>Description</h2>
 <p>
   This project implementing a gesture TV control.
   The algorithm can classify two hand gesture when placing the hand in the green window. The first gesture change the chanel forward,     the second gesture change the chanel backward.
   I used arduino UNO to control the TV.
-  The gesture classification works better with white background.
+  For now the gesture classification works only with white background.
 </p>  
 
 <div class="gif">
@@ -106,7 +106,7 @@
 
   <ul>
     <li>
-      First build the circuit, then connect the arduino UNO to the computer. Open the arduino program-"arduino_main.ino" which             located in "main_arduino" folder and update in the program your required remote signal.<br /> <br /> 
+      First build the circuit, then connect the arduino UNO to the computer. Open the arduino program-"arduino_main.ino" which             located in "arduino" folder and update in the program your required remote signal.<br /> <br /> 
        For more information to how connect arduino to the computer click <a href="https://www.arduino.cc/en/main/howto">here.</a><br />
        To find your required signal click <a href="https://www.youtube.com/watch?v=8E3ltjnbV0c&t=1443s">here.</a><br /><br />
       </li>
