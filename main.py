@@ -4,9 +4,9 @@ from main_functions import webCamera
 
 def main():
     # load the model weights to json format
-    json_file = open('model/model.json', 'r')
-    loaded_model_json = json_file.read()
-    json_file.close()
+    
+    with open('model/model.json', 'r') as json_file:
+       loaded_model_json = json_file.read()
 
     # load weights into new model
     loaded_model = model_from_json(loaded_model_json)
