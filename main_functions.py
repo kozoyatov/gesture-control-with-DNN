@@ -47,7 +47,7 @@ def webCamera(model):
             cropped = draw_img[y_width+frame_pix:y_width + rec_width-frame_pix, x_width+frame_pix:x_width + rec_width - frame_pix].copy()
             prediction = model.predict(prepar_image(cropped))  # model prediction - list of 3 probabilities
 
-            if prediction[0][1] > pred_threshold: # model predict gesture 2
+            if prediction[0][1] > pred_threshold: # model predict gesture 1
                 counter_1 = 0
                 counter_2 += 1
                 send = 'p'
