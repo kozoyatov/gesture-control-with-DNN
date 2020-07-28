@@ -1,8 +1,8 @@
 # Gesture Control With DNN Model
 <h2>Description</h2>
 <p>
-  This project implementing a gesture TV control.
-  The algorithm can classify two hand gesture when placing the hand in the green window. The first gesture change the chanel forward,     the second gesture change the chanel backward.
+  This project implements a gesture TV control.
+  The algorithm can classify two hand gesture when placing the hand in the green window. The first gesture change the channel forward,     the second gesture changes the channel backward.
   I used arduino UNO to control the TV.
   For now the gesture classification works only with white background.
 </p>  
@@ -24,8 +24,8 @@
 
 <div class="gif">
   <h2>Model</h2>
-  I used MobileNetV2 as a foundation to the model with imagenet weights.  I removed the last 1000 neuron layer and  disable training of     the rest layers.
-  I added few more layers (later I will train them) and I achieved the final model:
+  I used MobileNetV2 as a foundation to the model with imagenet weights.  I removed the last 1000 neuron layer and disabled training of     the other layers.
+  I added a few more layers (later I will train them) and I achieved the final model:
   <pre>
     base_model = MobileNetV2(weights = 'imagenet', include_top=False)
     x=base_model.output
@@ -53,7 +53,7 @@
   
   </td>
     <td>
-      I took 500 photos of each class and label them. The model expect to get images with shape of 224X224X3, so I had to resize each           photo before using it. Finally I used keras method preprocess_input(). To solve the dimension problem I used numpy. The following function prapering images as needed:
+      I took 500 photos of each class and labeled them. The model expect to get images with shape of 224X224X3, so I had to resize each           photo before using it. Finally I used keras method preprocess_input(). To solve the dimension problem I used numpy. The following function prapering images as needed:
       <pre>
         def prepar_image(img):
           x=cv2.resize(img,(224,224))
@@ -106,12 +106,12 @@
 
   <ul>
     <li>
-      First build the circuit, then connect the arduino UNO to the computer. Open the arduino program-"arduino_main.ino" which             located in "arduino" folder and update in the program your required remote signal.<br /> <br /> 
+      First build the circuit, then connect the Arduino UNO to the computer. Open the Arduino program-"arduino_main.ino" which             located in "arduino" folder and update in the program your required remote signal.<br /> <br /> 
        For more information to how connect arduino to the computer click <a href="https://www.arduino.cc/en/main/howto">here.</a><br />
        To find your required signal click <a href="https://www.youtube.com/watch?v=8E3ltjnbV0c&t=1443s">here.</a><br /><br />
       </li>
     <li>
-      Run the main.py program (the arduino UNO have to be connected to the computer)
+      Run the main.py program (the Arduino UNO have to be connected to the computer)
    </li>
 
 
