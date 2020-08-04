@@ -88,6 +88,7 @@
   <ul>
     <li>cv2</li>
     <li>numpy</li>
+    <li>Tensorflow</li>
     <li>keras</li>
     <li>serial</li>
   </ul>
